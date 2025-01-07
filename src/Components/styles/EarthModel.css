@@ -1,0 +1,15 @@
+#globe {
+    /* cursor: move; */
+    transition: all 1.5s;
+    filter: drop-shadow(0 0 10px #000000);
+}
+#countryLabel {
+    font-family: courier;
+    color: black;
+    height: 10px;
+    margin: 50px;
+}
+
+body {
+  text-align: center;
+}

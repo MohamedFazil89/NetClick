@@ -1,0 +1,35 @@
+.Explore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+
+
+}
+
+.CurveBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #010307;
+    padding: 2rem;
+    width: 100%;
+    border-radius: 150% 150% 0 0;
+    position: relative;
+    top: 55px;
+}
+
+.Explore-Button {
+    font-family: "Montserrat", serif;
+    font-size: 1.2rem;
+    padding: 1rem 2.2rem;
+    background-color: transparent;
+    position: relative;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    z-index: 1; 
+    /* bottom: 2rem; */
+}

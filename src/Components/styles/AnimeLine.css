@@ -1,0 +1,23 @@
+.AnimeLineContainer {
+    position: absolute;
+    right: 30px;
+    top: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Line {
+    background-color: #D2D2D2;
+    width: 2px;
+    height: 197px;
+    position: relative;
+    left: 6px;
+}
+
+.Circle {
+    background-color: #7FA6F0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #D2D2D2 ;
+}
