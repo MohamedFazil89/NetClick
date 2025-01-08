@@ -33,3 +33,39 @@
     z-index: 1; 
     /* bottom: 2rem; */
 }
+
+/*  */
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Explore {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .CurveBox {
+        padding: 1.5rem;
+        border-radius: 100% 100% 0 0;
+        top: 30px;
+    }
+
+    .Explore-Button {
+        font-size: 1rem;
+        padding: 0.8rem 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .Explore {
+        padding: 0.5rem;
+    }
+
+    .CurveBox {
+        padding: 1rem;
+        top: 20px;
+    }
+
+    .Explore-Button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.5rem;
+    }
+}

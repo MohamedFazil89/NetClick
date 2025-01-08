@@ -48,3 +48,64 @@
     font-size: 3.4rem;
 }
 
+
+/*  */
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Body-Container {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 2rem;
+    }
+
+    .Slogan-text {
+        font-size: 2.4rem;
+        line-height: 3rem;
+        text-align: center;
+    }
+
+    .Power-words {
+        font-size: 2.4rem;
+        text-align: center;
+        padding-top: 5%;
+    }
+
+    .trust {
+        font-size: 1.6rem;
+    }
+
+    .success {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .Body-Container {
+        padding: 0.5rem;
+        gap: 1.5rem;
+    }
+
+    .Slogan-text {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        padding-top: 0;
+        text-align: center;
+    }
+
+    .Power-words {
+        font-size: 2rem;
+        padding-top: 2%;
+        text-align: center;
+    }
+
+    .trust {
+        font-size: 1.4rem;
+    }
+
+    .success {
+        font-size: 2.5rem;
+    }
+}
+

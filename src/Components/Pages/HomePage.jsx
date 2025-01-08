@@ -5,6 +5,7 @@ import "../styles/HomePage.css"
 // import Earth from "../assets/gis_earth.png"
 import Explore from "../Structures/Explore";
 import Earth from "../Structures/EarthModel"
+import  ParticleAnimation from "../Structures/ParticleAnimation"
 
 
 
@@ -13,6 +14,8 @@ export default function Home() {
         <>
             <NavBar />
             <AnimeLine />
+            <ParticleAnimation/>
+
             <div className="Body-Container">
                 <p className="Slogan-text">CRAFTING <br />
                     SOLUTION,<br />
