@@ -1,0 +1,92 @@
+#service{
+    height: 190vh;
+    color: white;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: -1;
+}
+
+.Provide-Box{
+    position: absolute;
+    border: 1px solid white;
+    top: 40%;
+    font-size: 1rem;
+    padding: .8rem 1.8rem;
+    font-family: "Montserrat", serif;
+    border-radius: .6rem;
+
+}
+
+.Box{
+    border: 1px solid white;
+    /* margin: 1rem; */
+    padding: 2rem  1rem;
+    border-radius: .3rem;
+    background-color: #111317;
+    position: relative;
+}
+.coloumn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Web{
+    bottom: 15rem;
+
+}
+
+.App{
+    right: 5rem;
+    bottom: 6rem;
+
+
+
+}
+
+.Graph{
+    left: 5rem;
+    bottom: 6rem;
+
+
+
+}
+
+.Edit{
+    top: 1rem;
+
+
+}
+.ConnectLine{
+    width: 2px;
+    height: 150px;
+    background-color: white;
+    position: absolute;
+}
+
+.WebConnect{
+    position: absolute;
+    top: 23.5rem;
+    height: 110px;
+}
+
+.AppConnect{
+    top: 28.5rem;
+    left: 528px;
+    transform: rotate(90deg);
+    height: 116px;
+
+}
+
+.GraphConnect{
+    top: 28rem;
+    right: 528px;
+    transform: rotate(-90deg);
+    height: 127px;
+
+}
+

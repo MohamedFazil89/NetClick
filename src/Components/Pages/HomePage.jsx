@@ -9,7 +9,8 @@ import  ParticleAnimation from "../Structures/ParticleAnimation"
 
 
 
-export default function Home() {
+
+export default function Home({ scrollToCollaborations }) {
     return (
         <>
             <NavBar />
@@ -30,7 +31,7 @@ export default function Home() {
                     <span className="success">SUCCESS</span><br />
                 </p>
             </div>
-            <Explore />
+            <Explore scrollToCollaboration={scrollToCollaborations} />
 
         </>
     )
