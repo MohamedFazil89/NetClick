@@ -1,30 +1,26 @@
 import React from "react";
-import NavBar from "../Structures/Navbar"
-import AnimeLine from "../Structures/AnimeLine"
-import "../styles/HomePage.css"
-// import Earth from "../assets/gis_earth.png"
+import NavBar from "../Structures/Navbar";
+import AnimeLine from "../Structures/AnimeLine";
+import "../styles/HomePage.css";
 import Explore from "../Structures/Explore";
-import Earth from "../Structures/EarthModel"
-import  ParticleAnimation from "../Structures/ParticleAnimation"
-
-
-
+import Earth from "../Structures/EarthModel";
+import ParticleAnimation from "../Structures/ParticleAnimation";
+import Splinex from '../Structures/Splinex'
 
 export default function Home({ scrollToCollaborations }) {
     return (
         <>
             <NavBar />
             <AnimeLine />
-            <ParticleAnimation/>
-
+            <ParticleAnimation />
             <div className="Body-Container">
-                <p className="Slogan-text">CRAFTING <br />
+                <p className="Slogan-text">
+                    CRAFTING <br />
                     SOLUTION,<br />
                     EMERGING<br />
-                    RESULTS</p>
-                    {/* <img src={Earth} alt="Earth" className="Earth" /> */}
-                    <Earth />
-
+                    RESULTS
+                </p>
+                <Splinex />
                 <p className="Power-words">
                     <span className="trust">TRUST</span> <br />
                     <span className="build">BUILD</span> <br />
@@ -32,7 +28,6 @@ export default function Home({ scrollToCollaborations }) {
                 </p>
             </div>
             <Explore scrollToCollaboration={scrollToCollaborations} />
-
         </>
-    )
+    );
 }
