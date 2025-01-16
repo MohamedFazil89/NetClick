@@ -1,10 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..300;1,100..200&display=swap');
 
+
+
+/* Global styles */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --home-bg-color: #cecece;
+    --particle-color: #0000;
+}
+
+[data-theme="dark"] {
+    --bg-color: #000000;
+    --text-color: #C6DAFF;
+    --home-bg-color: #111317;
+    --particle-color: #ffff;
+
+}
+
 .NavBar-container {
-    background-color: #000000;
+    background-color: var(--bg-color);
     list-style-type: none;
     font-size: 20px;
-    color: #C6DAFF;
+    color: var(--text-color);
     font-family: "Montserrat", serif;
     padding: 2rem;
     z-index: 2;
@@ -18,7 +36,7 @@
     /* justify-content: space-evenly; */
     list-style-type: none;
     font-size: 20px;
-    color: #C6DAFF;
+    color: var(--text-color);
     cursor: pointer;
 }
 
@@ -34,41 +52,48 @@
     /* width: 40px; */
 }
 .theme{
+    all: unset;
     margin-left: auto;
     cursor: pointer;
+    filter: drop-shadow(0 0 5px black);
+    
+}
+.SlidBar-list, .hamburger{
+    display: none;
 }
 
 /*  */
 
 /* Responsive Design */
+
+/* Medium screens (tablets) */
 @media (max-width: 768px) {
-    .Logo{
+    .Logo {
         display: none;
     }
+
     .NavBar-container {
         padding: 1rem;
+        flex-direction: column;
     }
 
     .NavBar-list {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        gap: 1rem;
     }
 
     .Pages {
         margin: 1rem 0;
     }
 
-    .Logo {
-        margin-right: 0;
-        margin-bottom: 1rem;
-    }
-
     .theme {
-        margin: 1rem 0;
+        margin-top: 1rem;
     }
 }
 
+/* Small screens (mobile phones) */
 @media (max-width: 480px) {
     .NavBar-container {
         font-size: 16px;
@@ -81,5 +106,9 @@
 
     .Pages {
         margin: 0.5rem 0;
+    }
+
+    .theme {
+        margin-top: 0.5rem;
     }
 }

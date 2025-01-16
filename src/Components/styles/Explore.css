@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #010307;
+    background-color: var(--bg-color);
     padding: 2rem;
     width: 100%;
     border-radius: 150% 150% 0 0;
@@ -25,12 +25,13 @@
     padding: 1rem 2.2rem;
     background-color: transparent;
     position: relative;
-    color: #ffffff;
-    border: 2px solid #ffffff;
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     z-index: 1; 
+    filter: drop-shadow(0 0 10px black);
     /* bottom: 2rem; */
 }
 

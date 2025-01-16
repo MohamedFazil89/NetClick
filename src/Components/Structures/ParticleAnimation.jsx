@@ -1,12 +1,27 @@
-import React, { useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
 const ParticlesBackground = () => {
+  const [particleColor, setParticleColor] = useState(""); // State for particle color
+
   const particlesInit = useCallback(async (engine) => {
     console.log("Engine loaded:", engine);
     await loadFull(engine); // Loads the tsparticles engine and plugins
   }, []);
+
+
+  useEffect(() =>{
+    const updateColor = () =>{
+      const rootStyle = getComputedStyle(document.documentElement);
+    const color = rootStyle.getPropertyValue("--particle-color").trim(); // Remove extra whitespace
+    setParticleColor(color); // Set the value in state
+    }
+
+    updateColor()
+
+
+  }, [])
 
   const particlesOptions = {
     fpsLimit: 60,
@@ -22,9 +37,9 @@ const ParticlesBackground = () => {
       },
     },
     particles: {
-      color: { value: "#C6DAFF" },
+      color: { value: particleColor }, // Dynamic color from state
       links: {
-        color: "#C6DAFF",
+        color: particleColor,
         distance: 150,
         enable: true,
         opacity: 0.5,
@@ -32,7 +47,7 @@ const ParticlesBackground = () => {
       },
       move: {
         enable: true,
-        speed: .5,
+        speed: 0.5,
         outModes: { default: "out" },
       },
       number: {
@@ -52,7 +67,24 @@ const ParticlesBackground = () => {
     detectRetina: true,
   };
 
-  return <Particles id="tsparticles" init={particlesInit} options={particlesOptions} />;
+  const handleColorChange = (event) => {
+    setParticleColor(event.target.value); // Update particle color
+  };
+
+  return (
+    <div>
+      <Particles id="tsparticles" init={particlesInit} options={particlesOptions} />
+      <div style={{ position: "absolute", top: "10px", left: "10px" }}>
+        <label htmlFor="colorPicker">Pick Particle Color: </label>
+        <input
+          id="colorPicker"
+          type="color"
+          value={particleColor}
+          onChange={handleColorChange}
+        />
+      </div>
+    </div>
+  );
 };
 
 export default ParticlesBackground;
