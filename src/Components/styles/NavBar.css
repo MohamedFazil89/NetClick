@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..300;1,100..200&display=swap');
 
-
-
 /* Global styles */
 :root {
     --bg-color: #ffffff;
@@ -15,7 +13,6 @@
     --text-color: #C6DAFF;
     --home-bg-color: #111317;
     --particle-color: #ffff;
-
 }
 
 .NavBar-container {
@@ -24,64 +21,100 @@
     font-size: 20px;
     color: var(--text-color);
     font-family: "Montserrat", serif;
-    padding: 2rem;
-    z-index: 2;
+    /* padding: .5rem; */
+    z-index: 12;
     position: relative;
-
-
 }
 
 .NavBar-list {
     display: flex;
-    /* justify-content: space-evenly; */
     list-style-type: none;
     font-size: 20px;
     color: var(--text-color);
     cursor: pointer;
-}
-
-.Pages {
-    margin-left: 6rem;
-
+    align-items: center;
+    justify-content: space-between;
 }
 
 .Logo {
     margin-right: 15%;
 }
-.logo{
-    /* width: 40px; */
-}
-.theme{
-    all: unset;
-    margin-left: auto;
-    cursor: pointer;
-    filter: drop-shadow(0 0 5px black);
-    
-}
-.SlidBar-list, .hamburger{
-    display: none;
+
+.logo {
+    width: 60px;
 }
 
-/*  */
+.theme {
+    all: unset;
+    cursor: pointer;
+    filter: drop-shadow(0 0 5px black);
+    margin-right: 1rem;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.SlidBar-list {
+    display: none;
+    list-style-type: none;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+    text-align: right;
+    position: absolute;
+    top: 4rem;
+    right: 1rem;
+    background-color: var(--bg-color);
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    border-radius: 8px;
+}
 
 /* Responsive Design */
 
 /* Medium screens (tablets) */
 @media (max-width: 768px) {
+    .NavBar-container {
+        padding: 1rem;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
     .Logo {
         display: none;
     }
 
-    .NavBar-container {
-        padding: 1rem;
-        flex-direction: column;
+    .hamburger {
+        display: flex;
+        all: unset;
+        justify-content: flex-end;
+        cursor: pointer;
+    }
+
+    .SlidBar-list.open {
+        display: flex;
+        top: 4rem;
+        transition: top 0.3s ease;
+    }
+
+    .SlidBar-list.close {
+        display: none;
     }
 
     .NavBar-list {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        align-items: flex-end;
         gap: 1rem;
+        display: none;
+        width: 100%;
+    }
+
+    .NavBar-list.open {
+        display: flex;
     }
 
     .Pages {
@@ -96,7 +129,7 @@
 /* Small screens (mobile phones) */
 @media (max-width: 480px) {
     .NavBar-container {
-        font-size: 16px;
+        font-size: 1rem;
         padding: 0.5rem;
     }
 
@@ -110,5 +143,23 @@
 
     .theme {
         margin-top: 0.5rem;
+    }
+
+    /* Ensure that the menu is properly responsive and easy to navigate on small screens */
+    .SlidBar-list {
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: var(--bg-color);
+        width: 80%;
+        height: 100vh;
+        box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 1.5rem;
+        gap: 2rem;
+    }
+
+    .hamburger {
+        display: flex;
     }
 }

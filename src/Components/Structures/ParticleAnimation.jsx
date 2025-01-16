@@ -75,13 +75,13 @@ const ParticlesBackground = () => {
     <div>
       <Particles id="tsparticles" init={particlesInit} options={particlesOptions} />
       <div style={{ position: "absolute", top: "10px", left: "10px" }}>
-        <label htmlFor="colorPicker">Pick Particle Color: </label>
-        <input
+        {/* <label htmlFor="colorPicker">Pick Particle Color: </label> */}
+        {/* <input
           id="colorPicker"
           type="color"
           value={particleColor}
           onChange={handleColorChange}
-        />
+        /> */}
       </div>
     </div>
   );

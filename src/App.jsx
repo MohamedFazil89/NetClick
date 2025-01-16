@@ -40,9 +40,9 @@ function App() {
     <Router>
       <div className="App">
         <Home scrollToCollaborations={scrollToCollaborations} />
-        <div ref={collaborationsRef} className="Service">
+        {/* <div ref={collaborationsRef} className="Service">
           <COLLABORATIONS />
-        </div>
+        </div> */}
       </div>
     </Router>
   );

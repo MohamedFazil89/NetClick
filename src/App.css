@@ -18,6 +18,8 @@ body{
     background-color: var(--home-bg-color);
     color: var(--text-color);
     font-family: "Montserrat", serif;
+    
+
 }
 
 
@@ -29,4 +31,74 @@ canvas{
     background-color: #010307;
     z-index: 0;
 
+}
+
+/*  */
+
+/* Global Responsive Design */
+@media (max-width: 1200px) {
+    /* Large screens (tablets and small laptops) */
+    body {
+        font-size: 18px;
+    }
+
+    canvas {
+        height: 45vh !important;
+    }
+}
+
+@media (max-width: 992px) {
+    /* Medium screens (tablets) */
+    body {
+        font-size: 16px;
+    }
+
+    .Service {
+        background-color: #111;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Smaller tablets and large mobile screens */
+    body {
+        font-size: 14px;
+    }
+
+    canvas {
+        height: 40vh !important;
+    }
+
+    /* Add more styling adjustments for smaller screens here */
+}
+
+@media (max-width: 480px) {
+    /* Small screens (mobile phones) */
+    body {
+        font-size: 12px;
+    }
+
+    canvas {
+        height: 35vh !important;
+    }
+
+    /* Service section adjustments for mobile view */
+    .Service {
+        background-color: #222;
+    }
+}
+
+/* Extra small screens (very small mobile devices) */
+@media (max-width: 320px) {
+    body {
+        font-size: 10px;
+    }
+
+    canvas {
+        height: 30vh !important;
+    }
+
+    /* Further adjustments for the smallest screens */
+    .Service {
+        background-color: #333;
+    }
 }

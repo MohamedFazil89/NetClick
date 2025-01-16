@@ -7,7 +7,6 @@ const NavBar = () => {
     const [theme, setTheme] = useState("light");
     const [menuOpen, setMenuOpen] = useState(false);
 
-
     // Load saved theme from localStorage (if any)
     useEffect(() => {
         const savedTheme = localStorage.getItem("theme") || "light";
@@ -29,8 +28,8 @@ const NavBar = () => {
     return (
         <nav className="NavBar-container">
             <ul className="NavBar-list">
-                <li className="Logo">Logo
-                    {/* <img src={Logo} alt="Logo" className="logo" /> */}
+                <li className="Logo">
+                    <img src={Logo} alt="Logo" className="logo" />
                 </li>
                 <li className="Pages">Home</li>
                 <li className="Pages">Service</li>
@@ -40,10 +39,12 @@ const NavBar = () => {
                     <img src={Theme} alt="Theme" />
                 </button>
             </ul>
+
             <button className="hamburger" onClick={toggleMenu}>
-                    ☰
-                </button>
-            <ul className={`SlidBar-list ${menuOpen ? "open" : ""}`}>
+                ☰
+            </button>
+
+            <ul className={`SlidBar-list ${menuOpen ? "open" : "close"}`}>
                 <li className="Pages">Home</li>
                 <li className="Pages">Service</li>
                 <li className="Pages">Works</li>
