@@ -7,6 +7,8 @@
     color: #C6DAFF;
     font-family: "Montserrat", serif;
     padding: 2rem;
+    z-index: 2;
+    position: relative;
 
 
 }
@@ -40,6 +42,9 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .Logo{
+        display: none;
+    }
     .NavBar-container {
         padding: 1rem;
     }

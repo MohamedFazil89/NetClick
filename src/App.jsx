@@ -8,9 +8,14 @@ function App() {
   const collaborationsRef = useRef(null);
   const [isScrollLocked, setIsScrollLocked] = useState(true); 
 
+  // Scroll to top on page reload
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []); // This ensures it only runs once on mount
+
   useEffect(() => {
     if (isScrollLocked) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = 'auto';
     } else {
       document.body.style.overflow = 'auto';
     }
@@ -26,7 +31,6 @@ function App() {
       behavior: 'smooth',
     });
 
-    
     setTimeout(() => {
       setIsScrollLocked(false); 
     }, 500); 
@@ -34,12 +38,12 @@ function App() {
 
   return (
     <Router>
-    <div className="App">
-      <Home scrollToCollaborations={scrollToCollaborations} />
-      <div ref={collaborationsRef} className='Service'>
-        <COLLABORATIONS />
+      <div className="App">
+        <Home scrollToCollaborations={scrollToCollaborations} />
+        {/* <div ref={collaborationsRef} className="Service">
+          <COLLABORATIONS />
+        </div> */}
       </div>
-    </div>
     </Router>
   );
 }

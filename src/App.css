@@ -20,12 +20,13 @@ body{
     font-family: "Montserrat", serif;
 }
 
+
 canvas{
     height: 50vh !important;
 }
 .Service{
     position: relative;
     background-color: #010307;
-    z-index: -2;
+    z-index: 0;
 
 }

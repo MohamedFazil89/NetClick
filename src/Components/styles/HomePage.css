@@ -11,6 +11,9 @@
 
 
 }
+.navbar{
+    z-index: 100;
+}
 
 .Slogan-text, .Power-words{
     font-family: "Montserrat", serif;

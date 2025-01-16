@@ -1,7 +1,12 @@
+*::selection{
+  background-color: transparent;
+
+}
+
 #globe {
     /* cursor: move; */
     transition: all 1.5s;
-    filter: drop-shadow(0 0 10px #000000);
+    filter: drop-shadow(0 0 10px #046ef8);
 }
 #countryLabel {
     font-family: courier;

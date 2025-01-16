@@ -10,9 +10,10 @@ import Splinex from '../Structures/Splinex'
 export default function Home({ scrollToCollaborations }) {
     return (
         <>
-            <NavBar />
+          <div className="navbar">
+          <NavBar />
+          </div>
             <AnimeLine />
-            <ParticleAnimation />
             <div className="Body-Container">
                 <p className="Slogan-text">
                     CRAFTING <br />
@@ -21,13 +22,17 @@ export default function Home({ scrollToCollaborations }) {
                     RESULTS
                 </p>
                 <Splinex />
+                {/* <Earth /> */}
                 <p className="Power-words">
                     <span className="trust">TRUST</span> <br />
                     <span className="build">BUILD</span> <br />
                     <span className="success">SUCCESS</span><br />
                 </p>
             </div>
+            <ParticleAnimation />
+
             <Explore scrollToCollaboration={scrollToCollaborations} />
+            
         </>
     );
 }

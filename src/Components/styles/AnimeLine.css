@@ -21,3 +21,38 @@
     border-radius: 50%;
     border: 2px solid #D2D2D2 ;
 }
+
+/*  */
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .AnimeLineContainer {
+        right: 20px; /* Adjust position for smaller screens */
+        top: 100px; /* Adjust top spacing for smaller screens */
+    }
+
+    .Line {
+        height: 150px; /* Reduce line height for smaller screens */
+    }
+
+    .Circle {
+        width: 8px; /* Adjust circle size for smaller screens */
+        height: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .AnimeLineContainer {
+        right: 15px;
+        top: 80px;
+    }
+
+    .Line {
+        height: 100px;
+    }
+
+    .Circle {
+        width: 6px;
+        height: 6px;
+    }
+}
